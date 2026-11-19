@@ -1,0 +1,384 @@
+:root {
+  color-scheme: light;
+  --paper: #faf9f5;
+  --ink: #192824;
+  --muted: #4c5a54;
+  --accent: #215843;
+  --accent-hover: #163c2e;
+  --rule: #d8dcd3;
+  --tint: #edf1e8;
+  --serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem/1.65 var(--sans);
+}
+
+h1, h2, h3, p, figure, dl, dd {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.23em;
+  text-decoration-thickness: 0.07em;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration-thickness: 0.12em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1;
+  padding: 0.5rem 0.9rem;
+  background: var(--paper);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.wrap {
+  width: min(69rem, calc(100% - 4rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-inner, .footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.6rem;
+  padding-block: 1.15rem;
+}
+
+.wordmark {
+  color: var(--ink);
+  font: 1.35rem/1.2 var(--serif);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.65rem;
+  font-size: 0.94rem;
+  font-weight: 550;
+}
+
+.site-nav a {
+  padding-block: 0.25rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.56fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 6.6rem);
+  padding-block: clamp(3.25rem, 6vw, 5.75rem);
+}
+
+.hero h1 {
+  font-size: clamp(3.3rem, 7.5vw, 6.5rem);
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.appointment {
+  margin-block-start: 1rem;
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.lede {
+  max-width: 28ch;
+  margin-block: 1.8rem 0.85rem;
+  font: clamp(1.67rem, 3.1vw, 2.35rem)/1.22 var(--serif);
+  letter-spacing: -0.025em;
+}
+
+.intro, .project p, .background p {
+  max-width: 65ch;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.3rem;
+  margin-block-start: 1.5rem;
+  font-weight: 600;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.62rem 1.05rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.22rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--accent-hover);
+  color: white;
+}
+
+.portrait {
+  width: min(100%, 20.5rem);
+  justify-self: end;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.32rem;
+  background: var(--tint);
+}
+
+.portrait figcaption {
+  margin-block-start: 0.55rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.29fr) minmax(0, 1fr);
+  gap: 1.25rem clamp(2rem, 6vw, 5rem);
+  padding-block: 2.95rem;
+  border-top: 1px solid var(--rule);
+}
+
+.section h2 {
+  color: var(--accent);
+  font-size: clamp(2rem, 3.4vw, 2.65rem);
+}
+
+.project h3 {
+  margin-block-end: 0.5rem;
+  font-size: clamp(1.55rem, 2.6vw, 2.05rem);
+}
+
+.project .project-title {
+  margin-block-end: 0.65rem;
+  color: var(--ink);
+}
+
+.project + .project {
+  margin-block-start: 1.9rem;
+  padding-block-start: 1.55rem;
+  border-top: 1px solid var(--rule);
+}
+
+.publication {
+  margin-block-start: 1.2rem;
+  padding: 0.9rem 1.15rem 1.05rem;
+  border-left: 3px solid var(--accent);
+  background: var(--tint);
+}
+
+.publication .metadata {
+  margin-block-end: 0.15rem;
+  font-size: 0.9rem;
+}
+
+.publication a {
+  font-weight: 650;
+}
+
+
+.background p + p {
+  margin-block-start: 0.75rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+@media (max-width: 720px) {
+  .wrap {
+    width: calc(100% - 2.5rem);
+  }
+
+  .hero, .section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    gap: 2rem;
+  }
+
+  .portrait {
+    width: min(100%, 16.5rem);
+    justify-self: start;
+  }
+
+  .section {
+    padding-block: 2.25rem;
+  }
+
+}
+
+@media (max-width: 370px) {
+  .site-nav {
+    gap: 0.25rem 1rem;
+  }
+}
+
+.site-nav a {
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+.page-intro {
+  padding-block: clamp(2.75rem, 6vw, 4.55rem) 2.1rem;
+}
+
+.page-intro h1 {
+  font-size: clamp(3rem, 6.4vw, 5rem);
+  letter-spacing: -0.055em;
+}
+
+.page-intro p {
+  max-width: 63ch;
+  margin-top: 0.95rem;
+  color: var(--muted);
+}
+
+.research-projects {
+  max-width: 49rem;
+  padding-block: 1.7rem 3.3rem;
+  border-top: 1px solid var(--rule);
+}
+
+.project h2 {
+  margin-block-end: 0.55rem;
+  font-size: clamp(1.75rem, 3vw, 2.2rem);
+}
+
+.institution {
+  grid-template-columns: minmax(10rem, 0.37fr) minmax(0, 1fr);
+}
+
+.institution h2 {
+  font-size: clamp(1.65rem, 2.9vw, 2.2rem);
+}
+
+.academic-role, .role-note {
+  margin-top: 0.45rem;
+  color: var(--muted);
+}
+
+.course-group h3 {
+  margin-bottom: 0.55rem;
+  font: 650 1rem/1.5 var(--sans);
+  letter-spacing: normal;
+}
+
+.course-group + .course-group {
+  margin-top: 1.7rem;
+}
+
+.course-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.course-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.3rem 1.15rem;
+  padding-block: 0.65rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.course-list li:last-child {
+  border-bottom: 0;
+}
+
+.course-name {
+  font-weight: 620;
+}
+
+.course-note {
+  max-width: 64ch;
+  margin-top: 0.2rem;
+  color: var(--muted);
+}
+
+.course-term {
+  flex: 0 0 11rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.6rem;
+  margin-bottom: 2.65rem;
+  font-weight: 620;
+}
+
+@media (max-width: 720px) {
+  .institution {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .course-list li {
+    flex-direction: column;
+  }
+
+  .course-term {
+    flex-basis: auto;
+  }
+}
