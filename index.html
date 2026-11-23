@@ -6,6 +6,37 @@
   <meta name="description" content="Syed Raza is a sociologist at Kenyon College whose research examines religion, moral judgment, and economic life.">
   <title>Syed Raza · Sociologist</title>
   <link rel="stylesheet" href="site.css">
+  <style>
+    @media (width > 720px) {
+      .hero {
+        row-gap: 0;
+      }
+
+      .hero-heading {
+        grid-area: 1 / 1;
+        align-self: end;
+      }
+
+      .hero-details {
+        grid-area: 2 / 1;
+        align-self: start;
+      }
+
+      .hero > .portrait {
+        grid-area: 1 / 2 / 3 / 3;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        row-gap: 1.25rem;
+      }
+
+      .hero-details .lede {
+        margin-block-start: 0;
+      }
+    }
+  </style>
   <script>
     // Preserve links to the original one-page site's sections.
     const sectionPages = {
@@ -33,27 +64,31 @@
 
   <main class="wrap" id="main">
     <section class="hero" id="about" aria-labelledby="name">
-          <div>
-            <h1 id="name">Syed Raza</h1>
-            <p class="appointment">Visiting Assistant Professor of Sociology, Kenyon College</p>
-            <p class="lede">I study how religion and moral judgment shape economic life.</p>
-            <p class="intro">
-              My research follows questions about faith and finance into everyday decisions about
-              investing and borrowing. In Chicago, I examine how Muslims weigh religious guidance,
-              financial expertise, and obligations to their communities when deciding which practices
-              they can participate in.
-            </p>
-            <div class="actions">
-              <a class="button" href="research.html">Explore my research</a>
-              <a href="https://www.kenyon.edu/directory/syed-raza/">Kenyon faculty profile</a>
-            </div>
-          </div>
-          <figure class="portrait">
-            <!-- Portrait from the Kenyon College faculty directory. -->
-            <img src="portrait.jpg" alt="Portrait of Syed Raza outdoors" width="424" height="500">
-            <figcaption>Portrait via Kenyon College</figcaption>
-          </figure>
-        </section>
+      <div class="hero-heading">
+        <h1 id="name">Syed Raza</h1>
+        <p class="appointment">Visiting Assistant Professor of Sociology, Kenyon College</p>
+      </div>
+
+      <figure class="portrait">
+        <!-- Portrait from the Kenyon College faculty directory. -->
+        <img src="portrait.jpg" alt="Portrait of Syed Raza outdoors" width="424" height="500">
+        <figcaption>Portrait via Kenyon College</figcaption>
+      </figure>
+
+      <div class="hero-details">
+        <p class="lede">I study how religion and moral judgment shape economic life.</p>
+        <p class="intro">
+          My research follows questions about faith and finance into everyday decisions about
+          investing and borrowing. In Chicago, I examine how Muslims weigh religious guidance,
+          financial expertise, and obligations to their communities when deciding which practices
+          they can participate in.
+        </p>
+        <div class="actions">
+          <a class="button" href="research.html">Explore my research</a>
+          <a href="https://www.kenyon.edu/directory/syed-raza/">Kenyon faculty profile</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
